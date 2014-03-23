@@ -1,7 +1,7 @@
 do-stats
 =================
 
-Statistics for drupal.org with [scrapdo](http://arshad.github.io/scrapdo) and Express.
+Statistics for drupal.org built with [scrapdo](http://arshad.github.io/scrapdo) and Express.
 
 ## Demo
 
