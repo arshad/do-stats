@@ -4,13 +4,22 @@ block content
   h1 Drupal.org Statistics
 
   h2 Enter your Drupal.org username
+  p Examples: 
+    a(href="?username=Dries") Dries
+    , 
+    a(href="?username=merlinofchaos") merlinofchaos
+    , 
+    a(href="?username=webchick") webchick
+    , 
+    a(href="?username=Dave Reid") Dave Reid
+
   form#user-form
     label Username
     input(type="text", name="username", required)
 
     input(type="submit", value="Submit")
 
-  - if (data.error) {
+  - if (data && data.error) {
       p.alert.alert-danger= data.error
   - }
 
