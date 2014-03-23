@@ -10,7 +10,11 @@ block content
 
     input(type="submit", value="Submit")
 
-  - if (data) {
+  - if (data.error) {
+      p.alert.alert-danger= data.error
+  - }
+
+  - else if (data) {
     h1 Information
 
     ul

@@ -5,12 +5,9 @@
 var request = require('request');
 var data = {};
 var hostname = 'http://do-api.heroku.com';
-// var hostname = 'http://localhost:5000'
 
 exports.index = function(req, res){
   options = { title: 'Drupal.org Stats' }
-
-  console.log(req);
 
   if (username = req.query.username) {
     options.title = 'Stats for ' + username;
@@ -36,7 +33,12 @@ exports.index = function(req, res){
 
 var getUserInfo = function(username, data, callback) {
   request(hostname + '/api/user/' + username, function(error, response, body) {
-    if (!error && response.statusCode == 200) {
+    // Handle user not found.
+    if (response.statusCode == 404) {
+      data.error = "User not found.";
+      callback(data);
+    }
+    else if (!error && response.statusCode == 200) {
       data.info = JSON.parse(body);
       getUserCommit(username, data, callback);
     }
