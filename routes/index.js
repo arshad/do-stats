@@ -27,7 +27,6 @@ exports.index = function(req, res){
     });
 
   } else {
-    options.examples = ['merlinofchaos', 'Dave Reid', 'populist'];
     res.render('index', options);
   }
 };
