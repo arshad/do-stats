@@ -3,13 +3,13 @@ extends layout
 block content
   h1 Drupal.org Statistics
 
-  h2 Enter your Drupal.org username
+  h4 Enter your Drupal.org username
 
   form#user-form
     label Username
     input(type="text", name="username", required)
 
-    input(type="submit", value="Submit")
+    input.button(type="submit", value="Submit")
 
   - if (data && data.error) {
       p.alert.alert-danger= data.error
@@ -63,6 +63,6 @@ block content
 
     hr
 
-    p This data is available in JSON 
+    p This data is also available in JSON format 
       a(href="?username=#{data.info.username}&json=1") here
   - }
