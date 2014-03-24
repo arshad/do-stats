@@ -4,7 +4,7 @@ block content
   h1 Drupal.org Statistics
 
   h2 Enter your Drupal.org username
-  
+
   form#user-form
     label Username
     input(type="text", name="username", required)
@@ -63,6 +63,6 @@ block content
 
     hr
 
-    p This data is available in JSON at 
-      a(href="#{source.json}") #{source.json}
+    p This data is available in JSON 
+      a(href="?username=#{data.info.username}&json=1") here
   - }
