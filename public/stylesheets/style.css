@@ -1,8 +1,7 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#header{
+  margin-top: 20px;
 }
 
-a {
-  color: #00B7FF;
+.form-inline > *{
+  margin: 0 5px;
 }
